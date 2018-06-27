@@ -22,34 +22,43 @@
 </div>
 
 Use the power of renderprop to delived a Library as a React component. Based on 
-[React-imported-component](https://github.com/theKashey/react-imported-component). Support SSR and React Suspense.
+[React-lodable](https://github.com/jamiebuilds/react-loadable). Does __not__ support SSR and React Suspense.
+Use [react-imported-library](https://github.com/theKashey/react-imported-library) if you are looking for them.
 
 - ⛅️ You can codesplit momentjs, you may async load any library and use it.
-- 🏎 Sync on server, and for already loaded stuff, async on client.
-- 🚀 Bundler-independent SSR (when used with react-imported-component).
 - 🔒 Written in TypeScript.
  
 ## Usage
 
+Have you heard, than moment.js is super hudge? Code split it!
 ```javascript
-import {importedLibrary, importedLibraryDefault, setConfig} from 'react-imported-library';
+import {importedLibrary, importedLibraryDefault, setConfig} from 'react-loadable-library';
 
 // do you need SSR support? Probably not (affect react-imported-component settings)
 setConfig({SSR: false});
 
 // this will import `default` export
-const Moment = importedLibraryDefault( () => import('moment.js'));
+const Moment = importedLibraryDefault( () => import('momentjs'));
 
 <Moment>
- { (momentjs) => <span> {moment(date).format(FORMAT)}
+ { (momentjs) => <span> {momentjs(date).format(FORMAT)}
 </Moment>
+```
 
+May be you have a small library, you may use somewhere inside your components?
+
+Codesplit it! 
+```js
+import {importedLibrary} from 'react-loadable-library';
 const Utils = importedLibrary( () => import('./utils.js'));
 
 <Utils>
  { ({a,b,c }) => <span> {a(b+c())}
 </Utils>
+```
 
+May be you also have to caclucate something heavy, not to do it on every `render`?
+```js
 // you may use "initialization hook" to offload some computations
 
 <Utils

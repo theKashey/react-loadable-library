@@ -1,11 +1,9 @@
 import * as React from 'react';
 import {mount} from 'enzyme';
-import {importedLibrary, importedLibraryDefault, setConfiguration} from "../src";
+import {importedLibrary, importedLibraryDefault} from "../src";
 
 
 describe('Specs', () => {
-
-  setConfiguration({SSR: false});
 
   const asyncLibrary = () => Promise.resolve({
     add: (a: number, b: number) => a + b,
