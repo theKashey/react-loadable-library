@@ -32,16 +32,15 @@ Use [react-imported-library](https://github.com/theKashey/react-imported-library
 
 Have you heard, than moment.js is super hudge? Code split it!
 ```javascript
-import {importedLibrary, importedLibraryDefault, setConfig} from 'react-loadable-library';
+import {importedLibraryDefault} from 'react-loadable-library';
 
-// do you need SSR support? Probably not (affect react-imported-component settings)
-setConfig({SSR: false});
+
 
 // this will import `default` export
 const Moment = importedLibraryDefault( () => import('momentjs'));
 
 <Moment>
- { (momentjs) => <span> {momentjs(date).format(FORMAT)}
+ { (momentjs) => <span> {momentjs(date).format(FORMAT)}</span> }
 </Moment>
 ```
 
@@ -50,10 +49,11 @@ May be you have a small library, you may use somewhere inside your components?
 Codesplit it! 
 ```js
 import {importedLibrary} from 'react-loadable-library';
+
 const Utils = importedLibrary( () => import('./utils.js'));
 
 <Utils>
- { ({a,b,c }) => <span> {a(b+c())}
+ { ({a,b,c }) => <span> {a(b+c())}</span> }
 </Utils>
 ```
 
