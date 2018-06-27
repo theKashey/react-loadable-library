@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>IMPORTED LIBRARY ✂</h1>
+  <h1>LOADABLE LIBRARY ✂</h1>
   <br/>
   <img src="./assets/imported-logo.png" alt="imported library" width="409" align="center">
   <br/>
@@ -12,10 +12,10 @@
     <img src="https://img.shields.io/npm/v/react-imported-library.svg?style=flat-square" />
   </a>
     
-  <a href="https://circleci.com/gh/theKashey/react-imported-library/tree/master">
-   <img src="https://img.shields.io/circleci/project/github/theKashey/react-imported-library/master.svg?style=flat-square)" alt="Build status">
+  <a href="https://travis-ci.org/theKashey/react-loadable-library">
+   <img src="https://travis-ci.org/theKashey/react-loadable-library.svg?branch=master" alt="Build status">
   </a> 
-    
+  
   <img src="https://badges.greenkeeper.io/theKashey/react-imported-library.svg" />
     
   <br/>
