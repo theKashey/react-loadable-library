@@ -104,9 +104,10 @@
     "@types/node" "*"
     "@types/react" "*"
 
-"@types/react-loadable@^5.4.0":
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/@types/react-loadable/-/react-loadable-5.4.0.tgz#7a4f0673de07473525ab27959cf4c2601e25f37f"
+"@types/react-loadable@^5.4.3":
+  version "5.4.3"
+  resolved "https://registry.yarnpkg.com/@types/react-loadable/-/react-loadable-5.4.3.tgz#b3891da6609a869b021319494b27ba85aaa83634"
+  integrity sha512-tmBmYSY1Ba0BgogDsWOA4W1Ml1P95Fk2XaxVXLYMEcocHmqseaibQOdKxkVii/TI9Pl+fJQGv4985E03sPa21A==
   dependencies:
     "@types/react" "*"
     "@types/webpack" "*"
